@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  overflow-x: hidden;
+}
+#page1 {
+  width: 100%;
+  height: 110vh;
+  background-image: url("https://img.freepik.com/premium-photo/medical-stethoscope-pills-red-heart-blue-background-many-different-medical-objects-light-background-top-view-ai-generated_538213-9245.jpg?w=740");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+}
+#nav #part2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+#nav h1 {
+  font-size: 50px;
+  cursor: pointer;
+}
+#nav h1:hover {
+  font-size: 70px;
+}
+#nav h4 {
+  font-size: 30px;
+  font-weight: 800px;
+  cursor: pointer;
+}
+#nav h4:hover {
+  border-bottom: 1px solid black;
+}
+#nav button {
+  padding: 22px 40px;
+  background-color: #fff;
+  font-size: 22px;
+  border: 2.5px solid black;
+  border-radius: 9px;
+  font-weight: 600;
+}
+#nav i {
+  display: inline-block;
+  font-size: 50px;
+}
+#middle {
+  padding: 40px 40px;
+  height: 90%;
+  width: 100%;
+  display: flex;
+}
+#left {
+  height: 100%;
+  width: 55%;
+}
+
+#middle #left h1 {
+  line-height: 1.2;
+  font-size: 94px;
+  font-family: Japan;
+}
+#middle #left p {
+  font-size: 38.2px;
+  margin-bottom: 43px;
+  margin-top: 43px;
+}
+#middle #left button {
+  font-size: 30px;
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  border-radius: 10px;
+  padding: 15px 25px;
+  padding-top: 10px;
+}
