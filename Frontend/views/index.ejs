@@ -8,7 +8,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
     <style>
+      .gowun-batang-regular {
+  font-family: "Gowun Batang", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gowun-batang-bold {
+  font-family: "Gowun Batang", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
         #nav {
             transition: background-color 0.3s ease;
             background-color: transparent; 
@@ -44,8 +59,8 @@
         <div id="page1" class="w-full min-h-screen mt-10">
             <div id="middle" class="px-10 py-10 flex h-5/6">
                 <div id="left" class="w-2/3">
-                    <h1 class="text-7xl leading-tight font-semibold">Ensuring Health Security Through Mediclaim Solutions</h1>
-                    <p class="text-4xl mt-10 mb-10">Our mediclaim services help clients secure and manage health coverage through a range of solutions including policy selection, claims assistance, risk assessment, and customer support.</p>
+                    <h1 class="text-7xl leading-tight font-semibold gowun-batang-bold">Ensuring Health Security Through <span class="text-pink-500">Mediclaim Solutions!</span></h1>
+                    <p class="text-4xl mt-10 mb-10 gowun-batang-regular">Our mediclaim services help clients secure and manage health coverage through a range of solutions including policy selection, claims assistance, risk assessment, and customer support.</p>
                     <div class="flex space-x-10">
                         <a href="/register" class="bg-gray-900 text-white px-5 py-4 rounded">Create Account</a>
                         <a href="/Login" class="bg-gray-900 text-white px-5 py-4 rounded">Login Account</a>
@@ -59,7 +74,7 @@
 
     <div class="page2 text-white p-4 min-h-screen" style="background-color: rgb(128, 182, 189);">
         <div class="">
-            <h1 class="text-gray-900 font-bold text-8xl flex justify-center items-center py-5">Explore the Best Policies Tailored for You!</h1>
+            <h1 class="text-gray-900 font-bold text-8xl flex justify-center items-center py-5 mx-8">Explore the Best Policies Tailored for You!</h1>
         </div>
         <div class="m-10 flex items-center justify-center gap-8">
             <div class="card bg-neutral text-neutral-content w-96">
@@ -80,6 +95,7 @@
               </div>
         </div>
     </div>
+    <hr>
 
 
     <!-- Page 2 Content
@@ -101,11 +117,21 @@
         </div> -->
 
 
-        <!-- page 3 content -->
-         <div class="min-h-screen ">
-
-              
-         </div>
+        <!-- page 3  -->
+        <div class="hero bg-base-200 min-h-screen bg-zinc-500 text-white " style="background-image: url();">
+          <div class="hero-content flex-col lg:flex-row">
+            <img
+           class="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNycK4yc4tdrxeC9DmbKt0eEpUUyIB5hhM7Q&s" />
+            <div>
+              <h1 class="text-5xl font-bold ">Meet The Agents!</h1>
+              <p class="py-6">
+                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                quasi. In deleniti eaque aut repudiandae et a id nisi.
+              </p>
+              <button class="btn btn-primary">Get Started</button>
+            </div>
+          </div>
+        </div>
 
 
         
