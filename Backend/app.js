@@ -10,7 +10,7 @@ app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.set("views", path.join(__dirname, "../frontend/views"));
-
+app.use(cookieParser());
 app.get("/",(req,res)=>{
     res.render("index")
 })
@@ -67,23 +67,32 @@ app.post("/login",async(req,res)=>{
 //logout
 app.get("/logout", (req, res) => {
   res.cookie("token", "");
-  res.redirect("/login");
+  res.redirect("/");
 });
 //profile from here
-app.get("/profile",(req,res)=>{
+app.get("/profile",isLoggedIn,(req,res)=>{
   res.render("profile")
 })
 
-//isLoggedin
-function isLoggedIn(req, res, next) {
-  if (req.cookies.token === "") {
-    res.redirect("login");
-  } else {
-    let data = jwt.verify(req.cookies.token, "secured#321");
-    req.user = data;
-    next();
-  }
+// Check if user is logged in
+app.get("/check-login", isLoggedIn, (req, res) => {
+  res.status(200).json({ message: "User is logged in" });
+});
 
-  //
+// Update the isLoggedIn function
+function isLoggedIn(req, res, next) {
+  if (!req.cookies || !req.cookies.token) {
+      // User is not logged in
+      return res.status(401).json({ message: "Please log in or register first." });
+  }
+  try {
+      let data = jwt.verify(req.cookies.token, "secured#321");
+      req.user = data;
+      next();
+  } catch (error) {
+      // Token is invalid
+      return res.status(401).json({ message: "Please log in or register first." });
+  }
 }
+
 app.listen(3000)
