@@ -10,6 +10,7 @@ app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.set("views", path.join(__dirname, "../frontend/views"));
+// app.set("views", path.join(__dirname, "../frontend/views/privatepolicy"));
 app.use(cookieParser());
 app.get("/",(req,res)=>{
     res.render("index")
@@ -95,4 +96,31 @@ function isLoggedIn(req, res, next) {
   }
 }
 
+
+// policy section
+
+app.get("/nivabupa",isLoggedIn,(req,res)=>{
+  res.render("privatepolicy/nivabupa")
+})
+app.get("/icic",isLoggedIn,(req,res)=>{
+  res.render("privatepolicy/icic")
+})
+app.get("/reliance",isLoggedIn,(req,res)=>{
+  res.render("privatepolicy/reliance")
+})
+app.get("/star",isLoggedIn,(req,res)=>{
+  res.render("privatepolicy/star")
+})
+app.get("/aditya",isLoggedIn,(req,res)=>{
+  res.render("privatepolicy/aditya")
+})
+app.get("/bajaj",isLoggedIn,(req,res)=>{
+  res.render("privatepolicy/bajaj")
+})
+app.get("/tata",isLoggedIn,(req,res)=>{
+  res.render("privatepolicy/tata")
+})
+app.get("/sbi",isLoggedIn,(req,res)=>{
+  res.render("privatepolicy/sbi")
+})
 app.listen(3000)
