@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: rej;
+            src: url(/fonts/Rejouice-Headline.ttf);
+        }
+        .gowun-batang-regular {
+            font-family: "Gowun Batang", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .gowun-batang-bold {
+            font-family: "Gowun Batang", serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        #nav {
+            transition: background-color 0.3s ease;
+            background-color: white; 
+            top: 0;
+            z-index: 1000; 
+        }
+
+        .bg-transparent {
+            background-color: transparent; 
+        }
+
+        .bg-blue-500 {
+            background-color: skyblue; 
+        }
+
+        /* Bullet Point Styling */
+        ul {
+            list-style-type: disc; /* Disc bullets for unordered lists */
+            padding-left: 40px; /* Adds space for the bullet points */
+            margin-bottom: 20px; /* Adds space after each list */
+        }
+
+        li {
+            margin-bottom: 10px; /* Adds space between list items */
+        }
+
+        p {
+            margin: 0; /* Removes default paragraph margins */
+            line-height: 1.6; /* Adjusts line height for readability */
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Navbar and Page 1 (wrapped in one container) -->
+    <div id="page1-container" class="w-full max-h-screen bg-cover bg-center">
+        <div id="nav" class="shadow-sm w-full flex items-center border-none justify-between px-20 py-3">
+            <h1 class="text-4xl text-emerald-900 cursor-pointer tracking-tighter gowun-batang-bold">Mediclaim <span class="text-pink-500">Solutions</span></h1>
+            <div id="part2" class="flex items-center gap-20">
+                <h4 class="text-xl cursor-pointer hover:border-b-2 border-black font-semibold gowun-batang-bold tracking-tighter">Home</h4>
+                <h4 class="text-xl cursor-pointer hover:border-b-2 border-black font-semibold gowun-batang-bold tracking-tighter">Services</h4>
+                <h4 class="text-xl cursor-pointer hover:border-b-2 border-black font-semibold gowun-batang-bold tracking-tighter">About Us</h4>
+                <h4 class="text-xl cursor-pointer hover:border-b-2 border-black font-semibold gowun-batang-bold tracking-tighter">Contact Us</h4>
+                <i class="ri-menu-fill text-3xl"></i>
+            </div>
+        </div>
+
+        <div id="page1">
+            <h1 class="gowun-batang-bold">Pradhan Mantri Jan Arogya Yojana :</h1>
+            <div id="infowrap-1">   
+                <div id="infobox1">
+                    <ul>
+                        <li><p>It provides a cover of Rs. 5 lakhs per family per year for secondary and tertiary care hospitalization across public and private empanelled hospitals in India.</p></li>
+                        <li><p>Medical examination, treatment, and consultation.</p></li>
+                        <li><p>Pre-hospitalization services.</p></li>
+                    </ul>
+                </div>
+                <div id="infobox2">
+                    <ul>
+                        <li><p>Medicine and medical consumables.</p></li>
+                        <li><p>Non-intensive and intensive care services.</p></li>
+                        <li><p>Diagnostic and laboratory investigations.</p></li>
+                        <li><p>Medical implantation services (where necessary).</p></li>
+                        <li><p>Accommodation benefits.</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="infowrap-2">
+                <div id="infobox3">
+                    <ul>
+                        <li><p>Food services.</p></li>
+                        <li><p>Complications arising during treatment.</p></li>
+                        <li><p>Post-hospitalization follow-up care up to 15 days.</p></li>
+                    </ul>
+                </div>
+                <div id="infobox4">
+                    <h2>Eligibility to apply for PM-JAY:</h2>
+                    <ul>
+                        <li><p>There is no restriction on the family size or gender.</p></li>
+                        <li><p>All senior citizens, above 70 years of age, irrespective of their social economic status will be given a health coverage of up to Rs. 5 lakh under this scheme.</p></li>
+                        <li><p>The applicant should belong to SC/ST households.</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onscroll = function() {
+            const nav = document.getElementById('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('bg-blue-500');
+                nav.classList.remove('bg-transparent');
+            } else {
+                nav.classList.remove('bg-blue-500');
+                nav.classList.add('bg-transparent');
+            }
+        };
+
+        document.getElementById("incomeForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+            const incomeValue = document.getElementById("income").value;
+            const resultText = document.getElementById("result");
+
+            if (incomeValue === "less_than_500k") {
+                resultText.innerHTML = "You selected an income less than 500,000:<br>1] Panjabrao Deshmukh Policy<br>2] Cristiano Ronaldo Policy";
+            } else if (incomeValue === "less_than_1200k") {
+                resultText.innerText = "You selected an income less than 1,200,000.";
+            } else if (incomeValue === "greater_than_500k") {
+                resultText.innerText = "You selected an income greater than 500,000.";
+            } else {
+                resultText.innerText = "Please select a valid income range.";
+            }
+        });
+
+        // Get started click
+        const buttons = document.querySelectorAll("#getStartedBtn, #anotherButton");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", function() {
+                fetch("/check-login")
+                    .then(response => {
+                        if (!response.ok) {
+                            return response.json().then(data => {
+                                alert(data.message); // Show the alert message from the server
+                            });
+                        }
+                        window.location.href = "/profile";
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                    });
+            });
+        });
+    </script>
+</body>
+</html>

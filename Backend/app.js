@@ -81,7 +81,7 @@ app.get("/check-login", isLoggedIn, (req, res) => {
 
 // Update the isLoggedIn function
 function isLoggedIn(req, res, next) {
-  if (!req.cookies || !req.cookies.token) {
+  if (!req.cookies && req.cookies.token === "") {
       // User is not logged in
       return res.status(401).json({ message: "Please log in or register first." });
   }

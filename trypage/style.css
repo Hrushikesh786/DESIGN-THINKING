@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: #f8fafc;
+
+}
+
+#page1{
+    width:100%;
+    /* background-color: aqua; */
+}
+
+#page1 h1{
+    padding: 40px;
+    font-size: 60px;
+}
+
+#infowrap-1{
+    width: 100%;
+    min-height: 100%;
+    /* background-color: blue; */
+    padding-left: 40px;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+#infobox1{
+    background-color: white;
+    color: black;
+    width: 700px;
+    height: 350px;
+    border-radius: 30px;
+    margin-right: 40px;
+    padding: 60px;
+    border: 2px solid black;
+    box-shadow: 0px 10px black;
+}
+
+#infobox1 p{
+    font-size: 20px;
+    line-height: 40px;
+}
+
+#infobox2{
+    background-color: black;
+    color: white;
+    width: 700px;
+    height: 350px;
+    border-radius: 30px;
+    margin-right: 20px;
+    padding: 50px;
+}
+
+#infobox2 p{
+    font-size: 20px;
+    line-height: 40px;
+}
+
+#infowrap-2{
+    width: 100%;
+    min-height: 100%;
+    /* background-color: blue; */
+    padding-left: 40px;
+    display: flex;
+    
+}
+
+#infobox3{
+    background-color: black;
+    color: white;
+    width: 700px;
+    height: 350px;
+    border-radius: 30px;
+    margin-right: 40px;
+    padding: 100px;
+}
+
+#infobox3 p{
+    font-size: 20px;
+    line-height: 40px;
+}
+
+#infobox4{
+    background-color: white;
+    color: black;
+    width: 700px;
+    height: 350px;
+    border-radius: 30px;
+    margin-right: 40px;
+    padding: 60px;
+    border: 2px solid black;
+    box-shadow: 0px 10px black;
+}
+
+#infobox4 p{
+    font-size: 20px;
+    line-height: 40px;
+}
+
+#infobox4 h2{
+    font-size: 25px;
+    list-style-position: outside;
+    margin-bottom: 8px;
+}
+ul {
+    list-style-type: disc; /* Ensure bullets are displayed */
+}
+
