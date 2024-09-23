@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: #f8fafc;
+
+}
+
+#page1{
+    width:100%;
+    /* background-color: aqua; */
+}
+
+#page1 h1{
+    padding: 40px;
+    font-size: 60px;
+}
+
+#infowrap-1{
+    width: 100%;
+    min-height: 100%;
+    /* background-color: blue; */
+    padding-left: 40px;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+#infobox1{
+    background-color: white;
+    color: black;
+    width: 700px;
+    height: 350px;
+    border-radius: 30px;
+    margin-right: 40px;
+    padding: 25px;
+    border: 2px solid black;
+    box-shadow: 0px 10px black;
+}
+
+#infobox1 p{
+    font-size: 20px;
+    line-height: 40px;
+}
+
+#infobox2{
+    background-color: black;
+    color: white;
+    width: 700px;
+    height: 350px;
+    border-radius: 30px;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+#infobox2 p{
+    font-size: 20px;
+    line-height: 35px;
+}
+
+#infowrap-2{
+    width: 100%;
+    min-height: 100%;
+    /* background-color: blue; */
+    padding-left: 40px;
+    display: flex;
+    
+}
+
+#infobox3{
+    background-color: black;
+    color: white;
+    width: 700px;
+    height: 350px;
+    border-radius: 30px;
+    margin-right: 40px;
+    padding: 40px;
+}
+
+#infobox3 p{
+    font-size: 20px;
+    line-height: 40px;
+}
+
+#infobox4{
+    background-color: white;
+    color: black;
+    width: 700px;
+    height: 350px;
+    border-radius: 30px;
+    margin-right: 40px;
+    padding: 20px;
+    border: 2px solid black;
+    box-shadow: 0px 10px black;
+}
+
+#infobox4 p{
+    font-size: 20px;
+    line-height: 25px;
+}
+
+#infobox4 h2{
+    font-size: 25px;
+    list-style-position: outside;
+    margin-bottom: 8px;
+}
+ul {
+    list-style-type: disc; /* Ensure bullets are displayed */
+}
+
+
+        @font-face {
+            font-family: rej;
+            src: url(/fonts/Rejouice-Headline.ttf);
+        }
+        .gowun-batang-regular {
+            font-family: "Gowun Batang", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .gowun-batang-bold {
+            font-family: "Gowun Batang", serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        #nav {
+            transition: background-color 0.3s ease;
+            background-color: white; 
+            top: 0;
+            z-index: 1000; 
+        }
+
+        .bg-transparent {
+            background-color: transparent; 
+        }
+
+        .bg-blue-500 {
+            background-color: skyblue; 
+        }
+
+        /* Bullet Point Styling */
+        ul {
+            list-style-type: disc; /* Disc bullets for unordered lists */
+            padding-left: 40px; /* Adds space for the bullet points */
+            margin-bottom: 20px; /* Adds space after each list */
+        }
+
+        li {
+            margin-bottom: 10px; /* Adds space between list items */
+        }
+
+        p {
+            margin: 0; /* Removes default paragraph margins */
+            line-height: 1.6; /* Adjusts line height for readability */
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Navbar and Page 1 (wrapped in one container) -->
+    <div id="page1-container" class="w-full max-h-screen bg-cover bg-center">
+        <div id="nav" class="shadow-sm w-full flex items-center border-none justify-between px-20 py-3">
+            <h1 class="text-4xl text-emerald-900 cursor-pointer tracking-tighter gowun-batang-bold">Mediclaim <span class="text-pink-500">Solutions</span></h1>
+            <div id="part2" class="flex items-center gap-20">
+                <h4 class="text-xl cursor-pointer hover:border-b-2 border-black font-semibold gowun-batang-bold tracking-tighter">Home</h4>
+                <h4 class="text-xl cursor-pointer hover:border-b-2 border-black font-semibold gowun-batang-bold tracking-tighter">Services</h4>
+                <h4 class="text-xl cursor-pointer hover:border-b-2 border-black font-semibold gowun-batang-bold tracking-tighter">About Us</h4>
+                <h4 class="text-xl cursor-pointer hover:border-b-2 border-black font-semibold gowun-batang-bold tracking-tighter">Contact Us</h4>
+                <i class="ri-menu-fill text-3xl"></i>
+            </div>
+        </div>
+
+        <div id="page1">
+            <h1 class="gowun-batang-bold">	Mahatma Jyotirao Pule Jan Arogya Yojana  :</h1>
+            <div id="infowrap-1">   
+                <div id="infobox1">
+                    <ul>
+                        <li><p> Mahatma Jyotirao Pule Jan Arogya Yojana is the flagship health insurance scheme of the Government of Maharashtra. The scheme provides end-to-end cashless services for identified diseases through a network of service providers from the Government and Private sector. The scheme earlier was known as Rajiv Gandhi Jeevandayee Arogya Yojana which was started on 2nd July 2012 in eight districts and then was expanded to 28 districts of Maharashtra from 21st November 2013.</p></li>
+                        <!-- <li><p>The primary objective of the scheme is to provide financial support to the economically weaker sections of the society in case of the death or disability of the earning member of the family. The scheme targets those who work in unorganized sectors such as agriculture, fishery, dairy, handloom, construction, and other similar occupations.</p></li> -->
+                    </ul>
+                </div>
+                <div id="infobox2">
+                    <ul>
+                        <li><p> Benefit Coverage:- </p></li>
+                        <li><p>	Burns.</p></li>
+                        <li><p>Cardiology</p></li>
+                        <li><p>Cardiovascular and thoracic surgery</p></li>
+                        <li><p>Critical care .</p></li>
+                        <li><p>Dermatology</p></li>
+                        <li><p>Endocrinology</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="infowrap-2">
+                <div id="infobox3">
+                    <ul>
+                        <li><p>ENT surgery</p></li>
+                        <li><p>General Medicine</p></li>
+                        <li><p>General Surgery</p></li>
+                        <li><p>Haematology</p></li>
+                        <li>Infectious diseases</li>
+                        
+                    </ul>
+                </div>
+                <div id="infobox4">
+                    <h2>Eligibility to apply for Mahatma Jyotirao Pule Jan Arogya Yojana  :</h2>
+                    <ul>
+                        <li><p>Category A :- Families holding Yellow ration card, Antyodaya Anna Yojana ration card (AAY), Annapurna ration card, Orange ration card (annual income up to ₹ 1,00,000) issued by Civil Supplies Department, Government of Maharashtra for 36 districts of Maharashtra.</p></li>
+                        <li><p>Category B :- White ration card holder farmer families from 14 agriculturally distressed districts of Maharashtra (Aurangabad, Jalna, Beed, Parbhani, Hingoli, Latur, Nanded, Osmanabad, Amravati, Akola, Buldhana, Washim, Yavatmal, and Wardha).</p></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onscroll = function() {
+            const nav = document.getElementById('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('bg-blue-500');
+                nav.classList.remove('bg-transparent');
+            } else {
+                nav.classList.remove('bg-blue-500');
+                nav.classList.add('bg-transparent');
+            }
+        };
+
+        document.getElementById("incomeForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+            const incomeValue = document.getElementById("income").value;
+            const resultText = document.getElementById("result");
+
+            if (incomeValue === "less_than_500k") {
+                resultText.innerHTML = "You selected an income less than 500,000:<br>1] Panjabrao Deshmukh Policy<br>2] Cristiano Ronaldo Policy";
+            } else if (incomeValue === "less_than_1200k") {
+                resultText.innerText = "You selected an income less than 1,200,000.";
+            } else if (incomeValue === "greater_than_500k") {
+                resultText.innerText = "You selected an income greater than 500,000.";
+            } else {
+                resultText.innerText = "Please select a valid income range.";
+            }
+        });
+
+        // Get started click
+        const buttons = document.querySelectorAll("#getStartedBtn, #anotherButton");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", function() {
+                fetch("/check-login")
+                    .then(response => {
+                        if (!response.ok) {
+                            return response.json().then(data => {
+                                alert(data.message); // Show the alert message from the server
+                            });
+                        }
+                        window.location.href = "/profile";
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                    });
+            });
+        });
+    </script>
+</body>
+</html>

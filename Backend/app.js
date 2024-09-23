@@ -123,4 +123,13 @@ app.get("/tata",isLoggedIn,(req,res)=>{
 app.get("/sbi",isLoggedIn,(req,res)=>{
   res.render("privatepolicy/sbi")
 })
+
+//goverment policy
+app.get("/aamaadmi",isLoggedIn,(req,res)=>{
+  res.render("govermentpolicy/aamaadmi")
+})
+
+app.get("/phule",isLoggedIn,(req,res)=>{
+  res.render("govermentpolicy/phule")
+})
 app.listen(3000)
