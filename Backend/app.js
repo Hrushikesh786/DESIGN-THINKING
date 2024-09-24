@@ -72,7 +72,12 @@ app.get("/logout", (req, res) => {
 });
 //profile from here
 app.get("/profile",isLoggedIn,(req,res)=>{
-  res.render("profile")
+  if(isLoggedIn){
+    res.render("profile")
+  }
+  else{
+    res.send("please login")
+  }
 })
 
 // Check if user is logged in
