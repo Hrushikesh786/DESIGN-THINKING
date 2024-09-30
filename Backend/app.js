@@ -21,9 +21,14 @@ app.get("/services",(req,res)=>{
   res.render("services")
 })
 //about us
-//services
+
 app.get("/AboutUs",(req,res)=>{
   res.render("aboutUs")
+})
+
+//ContactUs
+app.get("/ContactUs",(req,res)=>{
+  res.render("contactUs")
 })
 
 app.get("/register",(req,res)=>{
