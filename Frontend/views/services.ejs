@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Mediclaim</title>
+    <link rel="stylesheet" href="services.css">
+    
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f4f4f4, #e2e2e2);
+}
+
+header {
+    background: #b4cfed;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 5px solid #0f0f0f;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.8em;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+main {
+    padding: 20px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Set to 3 columns */
+    gap: 20px;
+}
+
+.service {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 123, 255, 0.1);
+    z-index: 0;
+    transition: background 0.3s;
+}
+
+.service:hover::before {
+    background: rgba(0, 123, 255, 0.2);
+}
+
+h2 {
+    color: #007BFF;
+    font-size: 1.6em;
+    margin: 10px 0;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #007BFF;
+    margin-top: 5px;
+    transition: width 0.3s;
+}
+
+.service:hover h2::after {
+    width: 100px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background: #e9ecef;
+    border-top: 1px solid #ccc;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Our Services</h1>
+        <p>Your health is our priority. Explore our offerings to find the right coverage for you!</p>
+    </header>
+
+    <main>
+        <section class="services">
+            <div class="service">
+                <h2>Health Insurance Plans</h2>
+                <p>Choose from a variety of health insurance plans that fit your lifestyle and budget:</p>
+                <ul>
+                    <li>Individual Health Insurance</li>
+                    <li>Family Floater Plans</li>
+                    <li>Senior Citizen Health Plans</li>
+                    <li>Critical Illness Coverage</li>
+                </ul>
+            </div>
+
+            <div class="service">
+                <h2>Policy Comparison Tool</h2>
+                <p>Utilize our easy-to-use tool to compare coverage, premiums, and benefits across different providers.</p>
+            </div>
+
+            <div class="service">
+                <h2>Claim Assistance</h2>
+                <p>Get help with the claims process:</p>
+                <ul>
+                    <li>Step-by-step guidance</li>
+                    <li>Documentation support</li>
+                    <li>Claim status follow-up</li>
+                </ul>
+            </div>
+
+            <div class="service">
+                <h2>24/7 Customer Support</h2>
+                <p>Our dedicated team is here for you around the clock to answer any questions.</p>
+            </div>
+
+            <div class="service">
+                <h2>Health and Wellness Resources</h2>
+                <p>Access tips and tools to maintain a healthy lifestyle and stay informed.</p>
+            </div>
+
+            <div class="service">
+                <h2>Telemedicine Services</h2>
+                <p>Consult healthcare professionals from the comfort of your home.</p>
+            </div>
+
+            <div class="service">
+                <h2>Network Hospitals and Cashless Treatment</h2>
+                <p>Enjoy cashless treatment at our extensive network of partner hospitals.</p>
+            </div>
+
+            <div class="service">
+                <h2>Personalized Consultations</h2>
+                <p>Work with our experts to find the best plan tailored to your needs.</p>
+            </div>
+
+            <div class="service">
+                <h2>Renewal and Policy Management</h2>
+                <p>Easily manage and renew your policies through our online portal.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Ready to get started? Contact us at <a href="mailto:info@yourcompany.com">AASH@mediclaim.com</a>.</p>
+        </footer>
+    </main>
+</body>
+</html>

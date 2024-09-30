@@ -16,6 +16,16 @@ app.get("/",(req,res)=>{
     res.render("index")
 })
 
+//services
+app.get("/services",(req,res)=>{
+  res.render("services")
+})
+//about us
+//services
+app.get("/AboutUs",(req,res)=>{
+  res.render("aboutUs")
+})
+
 app.get("/register",(req,res)=>{
     res.render("createAccount")
 })
