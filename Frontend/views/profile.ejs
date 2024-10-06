@@ -11,6 +11,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+<!-- toaster -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <style>
     @font-face {
         font-family: rej;
@@ -212,7 +215,55 @@
               <p class="py-6">
                 Clear your doubts with one-to-one calls with our company agents. Click on the 'Get Started' button below, fill out the form, and your call will be scheduled within 24 hours. Please feel free to connect. Thank you.
               </p>
-              <button class=" btn btn-active">Get Started</button>
+              <!-- <button class=" btn btn-active">Get Started</button> -->
+               <div>
+                <!-- You can open the modal using document.getElementById('ID').showModal() method -->
+                 <!-- //modal -->
+<button class="btn btn-active p-4 text-gray-900 " onclick="document.getElementById('my_modal_3').showModal()">GET STARTED</button>
+
+<dialog id="my_modal_3" class="modal">
+  <div class="modal-box text-gray-900">
+    <form method="dialog">
+      <!-- if there is a button in form, it will close the modal -->
+      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+    <form action="/agent" method="post" >
+      <h2 class="text-2xl font-bold mb-6 text-center text-gray-800 gowun-batang-bold ">Connect To Agent</h2>
+  
+  <div class="mb-4 ">
+    <label for="name" class="block text-gray-700 font-medium mb-2 gowun-batang-regular">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" 
+           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+  </div>
+  
+  <div class="mb-4">
+    <label for="email" class="block text-gray-700 font-medium mb-2 gowun-batang-regular">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" 
+           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+  </div>
+  
+  <div class="mb-4">
+    <label for="mobile" class="block text-gray-700 font-medium mb-2 gowun-batang-regular">Mobile Number:</label>
+    <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" 
+           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+  </div>
+
+  <div class="mb-4">
+    <label for="age" class="block text-gray-700 font-medium mb-2 gowun-batang-regular">Age:</label>
+    <input type="number" id="age" name="age" placeholder="Enter your age" 
+           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+  </div>
+
+  <div class="flex justify-center">
+    <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 gowun-batang-bold" onclick="showAlert()">
+      Submit
+    </button>
+  </div>
+    </form>
+  </div>
+</dialog>
+
+               </div>
             </div>
           </div>
         </div>
@@ -353,5 +404,18 @@
 });
 
     </script>
+    <script>
+      function showAlert() {
+          Toastify({
+              text: "Agent will contact you soon!",
+              duration: 3000, // 3 seconds
+              close: true, // Close button
+              gravity: "top", // Toast will appear at the top
+              position: "right", // Toast will appear on the right side
+              backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)", // Background color
+              stopOnFocus: true, // Prevent dismissal on hover
+          }).showToast();
+      }
+  </script>
 </body>
 </html>

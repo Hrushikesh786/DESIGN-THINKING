@@ -62,6 +62,9 @@ app.post("/register", async (req, res) => {
   app.get("/login",(req,res)=>{
     res.render("loginAccount")
 })
+app.post("/agent",(req,res)=>{
+  
+})
 app.post("/login",async(req,res)=>{
   let { email, username, password, name, age } = req.body;
     // userModel.findOne({ email });
