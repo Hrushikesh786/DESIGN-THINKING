@@ -4,6 +4,7 @@ const cookieParser = require("cookie-parser");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const userModel=require("./models/user")
+const Agent=require("./models/agent")
 
 const app=express()
 app.set("view engine", "ejs");
@@ -57,14 +58,28 @@ app.post("/register", async (req, res) => {
       });
     });
   });
+  app.post("/agent", async (req, res) => {
+    try {
+        let { email, name, age, mobile } = req.body;
+        
+        // Create and save agent information
+        const agentInfo = await Agent.create({
+            name, email, mobile, age
+        });
+
+        // Redirect to profile page after successful creation
+        res.redirect("profile");
+    } catch (err) {
+        console.error("Error creating agent:", err);
+        res.status(500).send("Internal Server Error");
+    }
+});
 
   //Login Option
   app.get("/login",(req,res)=>{
     res.render("loginAccount")
 })
-app.post("/agent",(req,res)=>{
-  
-})
+
 app.post("/login",async(req,res)=>{
   let { email, username, password, name, age } = req.body;
     // userModel.findOne({ email });
@@ -82,6 +97,11 @@ app.post("/login",async(req,res)=>{
         res.redirect("login")
       }
     })
+})
+
+
+app.post("/agent",(req,res)=>{
+  res.redirect("profile")
 })
 //logout
 app.get("/logout", (req, res) => {
