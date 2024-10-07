@@ -5,6 +5,9 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const userModel=require("./models/user")
 const Agent=require("./models/agent")
+const nodemailer=require("nodemailer")
+
+
 
 const app=express()
 app.set("view engine", "ejs");
@@ -58,13 +61,41 @@ app.post("/register", async (req, res) => {
       });
     });
   });
-  app.post("/agent", async (req, res) => {
+  
+
+app.post("/agent", async (req, res) => {
     try {
         let { email, name, age, mobile } = req.body;
-        
+
         // Create and save agent information
         const agentInfo = await Agent.create({
             name, email, mobile, age
+        });
+
+        // Set up Nodemailer transporter (using Gmail for this example)
+        let transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'hrushikeshsuryawanshi832@gmail.com', // replace with your email
+                pass: 'lxkz yldt fgxu jnen',  // replace with your email password or app password
+            }
+        });
+
+        // Set up email options
+        let mailOptions = {
+            from: email, // replace with your email
+            to: "arnav.22310597@viit.ac.in", // send to agent's email
+            subject: 'Welcome to our service!',
+            text: `Hi Agent,\n\nThis is new User Want to Connect You. Here are Users details:\n\nName: ${name}\nAge: ${age}\nMobile: ${mobile}\n\nBest regards,\As a Part of Protocol Contact them immediately,\nYour Team`
+        };
+
+        // Send email
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                console.error("Error sending email:", error);
+            } else {
+                console.log("Email sent: " + info.response);
+            }
         });
 
         // Redirect to profile page after successful creation
@@ -100,9 +131,6 @@ app.post("/login",async(req,res)=>{
 })
 
 
-app.post("/agent",(req,res)=>{
-  res.redirect("profile")
-})
 //logout
 app.get("/logout", (req, res) => {
   res.cookie("token", "");
